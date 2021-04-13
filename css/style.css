@@ -9,14 +9,13 @@ li {
   cursor: pointer;
 }
 
-.clear {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .cont90 {
   width: 90%;
+  margin: 0 auto;
+}
+
+.cont70 {
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -28,9 +27,15 @@ header {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: white;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  z-index: 999;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -121,13 +126,13 @@ header {
 
 .specialist {
   padding-top: 100px;
-  height: 100%;
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 .specialist span {
   font-size: 35px;
+  color: #6b6868;
 }
 .specialist hr {
   width: 10%;
@@ -135,7 +140,9 @@ header {
   border-color: #fdd13e;
 }
 .specialist p {
+  font-size: 20px;
   margin: 30px 0;
+  color: #8F8F8F;
 }
 
 .cards {
@@ -148,7 +155,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: gray;
+  background-color: #F5F5F5;
   width: 350px;
   height: 250px;
   text-align: center;
@@ -157,7 +164,7 @@ header {
 }
 
 .icon {
-  border: 1px solid black;
+  border: 1px solid #6b6868;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -166,35 +173,169 @@ header {
 }
 .icon i {
   font-size: 25px;
+  color: #6b6868;
 }
 .descriction h3, .descriction p {
   padding: 10px;
+  color: #6b6868;
 }
 .descriction h3 {
   font-size: 25px;
 }
-
+/* foto tagliata  */
 .circle {
+  position: absolute;
   width: 100%;
-  height: 100px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: -50px;
-  border: 1px solid black;
+  margin-bottom: -100px;
   background-color: white;
   overflow: hidden;
-
+  z-index: 3;
+  margin-top: -100px;
 }
+
 .bnr-pic {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 60vh;
+  justify-content: center;
+  height: 70vh;
   background-image: url("https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/home-244125289.jpg");
   background-position: center center;
   background-size: no-repeat;
+  z-index: 1;
 }
 
+.icns-cont {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
 .icn  {
   text-align: center;
+  color: #fdd13e;
+}
+.icn i {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+.icn h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.icn p {
+  color: white;
+}
+/* foto tagliata  */
+.pics {
+  display: flex;
+  justify-content: center;
+}
+.pics img {
+  width: 20%;
+  margin: 20px;
+}
+
+.all-proj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.all-proj span {
+  padding: 0 55px;
+  color: gray;
+}
+.all-proj hr {
+  width: 25%;
+  border-color: #F5F5F5;
+}
+
+.bg-gray-100 {
+  margin-top: 150px;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+.boxes {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin-top: 70px;
+  padding-bottom: 80px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box i {
+  color: white;
+  font-size: 60px;
+}
+.box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border: none;
+  padding-top: 10px;
+}
+
+.home {
+  background-color: #4EA4A5;
+}
+.sun {
+  background-color: #4E6DA5;
+}
+.user {
+  background-color: #FE5f1d;
+}
+.light {
+  background-color: #7d7903;
+}
+.box p {
+  font-size: 20px;
+  color: #8F8F8F;
+}
+.box hr {
+  margin-top: 10px;
+  width: 30px;
+  border: 1px solid #8F8F8F;
+}
+.box p {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  line-height: 35px;
+}
+
+/* foto tagliata  */
+
+.circle.gray {
+  background-color: #F5F5F5;
+}
+.cont-pic .bnr-pic {
+  background-image: url("https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/home-parallax-144609983.jpg");
+}
+.cont-pic .specialist {
+  margin-top: -100px;
+}
+.cont-pic .specialist span {
+  color: white;
+}
+.cont-pic .specialist img {
+  width: 8%;
+  border-radius: 50%;
+}
+.cont-pic .specialist p {
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+}
+.cont-pic .specialist h3 {
+  color: white;
 }
