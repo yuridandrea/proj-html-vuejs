@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML/VueJS</title>
 </head>
@@ -25,7 +27,7 @@
               <li>Services</li>
               <li>Work</li>
               <li>Articles</li>
-              <li class="btn">Get Quote</li>
+              <li class="btn dark">Get Quote</li>
             </ul>
           </div>
         </div>
@@ -38,62 +40,90 @@
           <p>we building inspiring residential & commercial spaces</p>
           <div class="btns">
             <div class="btn">explore recent work</div>
-            <div class="btn">get a quote today</div>
+            <div class="btn dark">get a quote today</div>
           </div>
         </div>
         <div class="banner">
           <p>do you have a construction project we can help you with?</p>
           <div class="btns">
-            <div class="btn">get a free quote</div>
+            <div class="btn white">get a free quote</div>
           </div>
         </div>
       </div>
       <!-- fine jumbotron  -->
     </header>
-    <main class="">
+    <main>
       <div class="cont90">
         <!-- testo e cards  -->
-        <div class="specialist ">
+        <div class="specialist more-padding">
           <span>Specialist In Modern Construction</span>
           <hr>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
         </div>
         <!-- cards  -->
-        <div class="cards">
-          <div class="card">
-            <div class="icon">
-              <i class="far fa-building"></i>
-            </div>
-            <div class="descriction">
-              <h3>Buildings</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon">
-              <i class="fas fa-sync-alt"></i>
-            </div>
-            <div class="descriction">
-              <h3>Renovate</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+        <div class="flex margin-bott">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="icon">
+                  <i class="far fa-building"></i>
+                </div>
+                <h1>Buildings</h1>
+                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+              </div>
+              <div class="flip-card-back">
+                <h1>ARTFULLY CRAFTED</h1>
+                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                <div class="btn light">GET A QUOTE</div>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="icon">
-              <i class="fas fa-home"></i>
-            </div>
-            <div class="descriction">
-              <h3>Construct</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h1>Buildings</h1>
+                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+              </div>
+              <div class="flip-card-back">
+                <h1>ARTFULLY CRAFTED</h1>
+                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                <div class="btn light">GET A QUOTE</div>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="icon">
-              <i class="fas fa-truck"></i>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="icon">
+                  <i class="fas fa-home"></i>
+                </div>
+                <h1>Buildings</h1>
+                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+              </div>
+              <div class="flip-card-back">
+                <h1>ARTFULLY CRAFTED</h1>
+                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                <div class="btn light">GET A QUOTE</div>
+              </div>
             </div>
-            <div class="descriction">
-              <h3>Exclusive</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="icon">
+                  <i class="fas fa-truck"></i>
+                </div>
+                <h1>Buildings</h1>
+                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+              </div>
+              <div class="flip-card-back">
+                <h1>ARTFULLY CRAFTED</h1>
+                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                <div class="btn light">GET A QUOTE</div>
+              </div>
             </div>
           </div>
         </div>
@@ -129,15 +159,57 @@
       <!-- fine foto con taglio  -->
       <div class="cont90">
         <!-- foto orizz -->
-        <div class="specialist ">
+        <div class="specialist plus-padding">
           <span>Specialist In Modern Construction</span>
           <hr>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
         </div>
         <div class="pics">
-          <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project2-featured-15013609.jpg" alt="">
-          <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project1-featured-294276386.jpg" alt="">
-          <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project3-featured-189023420.jpg" alt="">
+          <div class="pic-box">
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project2-featured-15013609.jpg" alt="">
+            <div class="none">
+              <div class="cont-icons">
+                <div class="icon">
+                  <i class="fas fa-link"></i>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <p>Exclusive Urban Living</p>
+                <span>Commercial</span>
+              </div>
+            </div>
+          </div>
+          <div class="pic-box">
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project1-featured-294276386.jpg" alt="">
+            <div class="none">
+              <div class="cont-icons">
+                <div class="icon">
+                  <i class="fas fa-link"></i>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <p>Exclusive Urban Living</p>
+                <span>Commercial</span>
+              </div>
+            </div>
+          </div>
+          <div class="pic-box">
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project3-featured-189023420.jpg" alt="">
+            <div class="none">
+              <div class="cont-icons">
+                <div class="icon">
+                  <i class="fas fa-link"></i>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <p>Exclusive Urban Living</p>
+                <span>Commercial</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="all-proj">
           <hr>
@@ -203,10 +275,117 @@
           <h3>JHON DOE - NEW HOME OWNER</h3>
         </div>
       </div>
-      <div class="circle dwn"></div>
+      <div class="circle gray"></div>
       </div>
-      
+      <!-- articoli -->
+      <div class="container gray">
+      <div class="cont70">
+        <div class="specialist plus-padding">
+          <span>Latest News</span>
+          <hr>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+        </div>
+        <div class="boxes news">
+          <div class="box"> 
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-134132600.jpg" alt="">
+            <p>Redeveloping Florida’s Remote Southern Coast</p>
+            <span class="date">December 7th, 2015</span>
+            <hr>
+            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+          </div>
+          <div class="box">
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-92486644.jpg" alt="">
+            <p>How We Manage Large Construction Projects</p>
+            <span class="date">December 7th, 2015</span>
+            <hr>
+            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+          </div>
+          <div class="box">
+            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-332773904.jpg" alt="">
+            <p>Future proofing a modern home</p>
+            <span class="date">December 7th, 2015</span>
+            <hr>
+            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+          </div>          
+        </div>
+        <div class="all-proj new">
+          <hr>
+          <span>VIEW ALL ARTICLES</span>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!-- fine articoli  -->
+    <!-- loghi allineati -->
+    <div class="container">
+      <div class="cont70">
+        <div class="specialist">
+          <span>Trusted Partners</span>
+          <hr>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+        </div>
+        <div class="cont-pics">
+          <img src="img/estate.webp" alt="">
+          <img src="img/foodhouse.webp" alt="">
+          <img src="img/foresthouse.webp" alt="">
+          <img src="img/real.webp" alt="">
+          <img src="img/secure.webp" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- fine loghi allineati -->
+    <!-- foto cantiere -->
+    <div class="container">
+      <div class="pic-builders">
+        <div class="cont-flex">
+          <div class="text">
+            <div class="specialist">
+              <span>Trusted Partners</span>
+              <hr>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+            </div>
+          </div>
+          <div class="button">
+            <div class="btn">GET A FREE QUOTE</div>
+            <span>Only take a few seconds!</span>
+          </div>
+        </div>
+      </div>
+    </div>
     </main>
+    <footer>
+      <div class="container darkgray">
+        <div class="cont90 flex">
+          <div class="column">
+            <img class="logo" src="img/footer-logo.png" alt="">
+            <p>We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.</p>
+            <div class="btn">LEARN MORE</div>
+          </div>
+          <div class="column">
+            <h3>LATEST TWEETS</h3>
+            <span>Tweets by Theme_Fusion</span>
+          </div>
+          <div class="column">
+            <h3>CONTACT US TODAY</h3>
+            <ul>
+              <li>Corporate Location <br> 1600 Amphitheatre Parkway <br> London WC1 1BA</li>
+              <li>Residential Location <br> 9521 Broadsberry Avenue <br> Paddington RC7 9ZA</li>
+              <li>1.800.458.556 / 1.800.532.2112</li>
+              <li>info@your-domain.com</li>
+              <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+              <li>Saturday - Sunday: 9:00 AM - 12:00 PM</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>FIND US</h3>
+            <img class="map" src="img/construction_map_pin.png-Notti" alt="">
+          </div>
+        </div>
+        <div class="black">
+          <p>COPYRIGHT 2012 - 2015 AVADA THEME BY THEME FUSION   |   ALL RIGHTS RESERVED   |   POWERED BY WORDPRESS</p>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
