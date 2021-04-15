@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -44,12 +47,39 @@ header {
   background-color: white;
   z-index: 999;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
 }
+
+.arrow {
+  position: fixed;
+  display: inline-block;
+  right: 628px;
+  top: 82px;
+  font-size: 25px;
+  color: white;
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: -5px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.arrow-up i {
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 15px;
+}
+
 .logo {
   height: 10vh;
 }
@@ -258,7 +288,7 @@ header {
   line-height: 30px;
 }
 .flip-card-back .light {
-  background-color: yellow;
+  background-color: #FFE07B;
   font-size: 15px;
 }
 
@@ -313,7 +343,6 @@ header {
 }
 .pics img {
   width: 100%;
-  /* margin: 20px; */
 }
 .pic-box {
   position: relative;
@@ -346,7 +375,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.icon {
+.none .icon {
   color:#fdd13e;
   display: inline-block;
   padding: 20px;
@@ -404,6 +433,7 @@ header {
   height: 120px;
   border: none;
   padding-top: 10px;
+  border-radius: 50%;
 }
 
 .home {
@@ -579,7 +609,22 @@ padding-bottom: 50px;
   font-size: 12px;
   line-height: 10vh;
 }
+.black p {
+  display: inline-block;
+  float:left;
+}
 
+.social-box {
+  display: inline-block;
+  float:right;
+}
+.social-box ul {
+  margin-right: 100px;
+}
+.social-box li {
+  font-size: 18px;
+  padding: 0 5px;
+}
 /* colonne */
 
 .flex {
@@ -588,9 +633,6 @@ padding-bottom: 50px;
 }
 
 .column {
-  flex-flow: wrap;
-  /* justify-content: space-around; */
-  /* align-items: center; */
   color: #727272;
   width: 30%;
   height: 100%;
@@ -609,6 +651,7 @@ padding-bottom: 50px;
 }
 .column li {
   margin-bottom: 10px;
+  width: 50%;
 }
 .column .map {
   width: 100%;
@@ -637,3 +680,4 @@ padding-bottom: 50px;
   border-radius: 5%;
   padding: 20px;
 }
+

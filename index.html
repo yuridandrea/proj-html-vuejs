@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400&display=swap" rel="stylesheet">
@@ -11,381 +12,389 @@
   <title>HTML/VueJS</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <!-- nav -->
-      <!-- aggiungere fixed -->
-      <div class="fixed">
-        <div class="nav">
-          <div class="logo">
-            <img src="img/construction_logo.png" alt="">
-          </div>
-          <div class="list">
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Work</li>
-              <li>Articles</li>
-              <li class="btn dark">Get Quote</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- fine nav  -->
-      <!-- jumbotron + banner giallo -->
-      <div class="cont-jumb">
-        <div class="jumbo">
-          <h1>building inspiring spaces</h1>
-          <p>we building inspiring residential & commercial spaces</p>
-          <div class="btns">
-            <div class="btn">explore recent work</div>
-            <div class="btn dark">get a quote today</div>
-          </div>
-        </div>
-        <div class="banner">
-          <p>do you have a construction project we can help you with?</p>
-          <div class="btns">
-            <div class="btn white">get a free quote</div>
-          </div>
-        </div>
-      </div>
-      <!-- fine jumbotron  -->
-    </header>
-    <main>
-      <div class="cont90">
-        <!-- testo e cards  -->
-        <div class="specialist more-padding">
-          <span>Specialist In Modern Construction</span>
-          <hr>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
-        </div>
-        <!-- cards  -->
-        <div class="flex margin-bott">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="icon">
-                  <i class="far fa-building"></i>
-                </div>
-                <h1>Buildings</h1>
-                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
-              </div>
-              <div class="flip-card-back">
-                <h1>ARTFULLY CRAFTED</h1>
-                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
-                <div class="btn light">GET A QUOTE</div>
-              </div>
+  <div id="app">
+    <div class="container">
+      <header>
+        <!-- nav -->
+        <div class="fixed">
+          <div class="nav">
+            <div class="logo">
+              <img  id="logo":src="logoNav" alt="">
+            </div>
+            <div class="list">
+              <ul >
+                <li v-for="(nav, index) in navMenu" v-if="index == navMenu.length -1" class="btn dark">{{nav}}</li>
+                <li v-else>{{nav}}</li>
+              </ul>
             </div>
           </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="icon">
-                  <i class="fas fa-sync-alt"></i>
-                </div>
-                <h1>Buildings</h1>
-                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
-              </div>
-              <div class="flip-card-back">
-                <h1>ARTFULLY CRAFTED</h1>
-                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
-                <div class="btn light">GET A QUOTE</div>
-              </div>
+          <div class="arrow">
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <a href="#page-up">
+            <div class="arrow-up">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+          </a>
+        </div>
+        <!-- fine nav  -->
+        <!-- jumbotron + banner giallo -->
+        <div id="page-up" class="cont-jumb">
+          <div class="jumbo">
+            <h1>building inspiring spaces</h1>
+            <p>we building inspiring residential & commercial spaces</p>
+            <div class="btns">
+              <div class="btn">explore recent work</div>
+              <div class="btn dark">get a quote today</div>
             </div>
           </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="icon">
-                  <i class="fas fa-home"></i>
-                </div>
-                <h1>Buildings</h1>
-                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
-              </div>
-              <div class="flip-card-back">
-                <h1>ARTFULLY CRAFTED</h1>
-                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
-                <div class="btn light">GET A QUOTE</div>
-              </div>
-            </div>
-          </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="icon">
-                  <i class="fas fa-truck"></i>
-                </div>
-                <h1>Buildings</h1>
-                <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
-              </div>
-              <div class="flip-card-back">
-                <h1>ARTFULLY CRAFTED</h1>
-                <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
-                <div class="btn light">GET A QUOTE</div>
-              </div>
+          <div class="banner">
+            <p>do you have a construction project we can help you with?</p>
+            <div class="btns">
+              <div class="btn white">get a free quote</div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- fine cards  -->
-      <!-- foto con taglio  -->
-      <div class="circle dwn"></div>
-      <div class="bnr-pic">
-        <div class="icns-cont">
-          <div class="icn">
-            <i class="fas fa-suitcase"></i>
-            <h2>3543</h2>
-            <p>PLANNING APPLICATION</p>
-          </div>
-          <div class="icn">
-            <i class="far fa-building"></i>
-            <h2>875</h2>
-            <p>COMPLETED PROJECT</p>
-          </div>
-          <div class="icn">
-            <i class="fas fa-users"></i>
-            <h2>178</h2>
-            <p>TRAINED PROFESSIONALS</p>
-          </div>
-          <div class="icn">
-            <i class="fas fa-globe"></i>
-            <h2>19</h2>
-            <p>INTERNETIONAL OFFERTS</p>
-          </div>
-        </div>
-      </div>
-      <div class="circle dwn"></div>
-      <!-- fine foto con taglio  -->
-      <div class="cont90">
-        <!-- foto orizz -->
-        <div class="specialist plus-padding">
-          <span>Specialist In Modern Construction</span>
-          <hr>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
-        </div>
-        <div class="pics">
-          <div class="pic-box">
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project2-featured-15013609.jpg" alt="">
-            <div class="none">
-              <div class="cont-icons">
-                <div class="icon">
-                  <i class="fas fa-link"></i>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <p>Exclusive Urban Living</p>
-                <span>Commercial</span>
-              </div>
-            </div>
-          </div>
-          <div class="pic-box">
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project1-featured-294276386.jpg" alt="">
-            <div class="none">
-              <div class="cont-icons">
-                <div class="icon">
-                  <i class="fas fa-link"></i>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <p>Exclusive Urban Living</p>
-                <span>Commercial</span>
-              </div>
-            </div>
-          </div>
-          <div class="pic-box">
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project3-featured-189023420.jpg" alt="">
-            <div class="none">
-              <div class="cont-icons">
-                <div class="icon">
-                  <i class="fas fa-link"></i>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <p>Exclusive Urban Living</p>
-                <span>Commercial</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="all-proj">
-          <hr>
-          <span>VIEW ALL PROJECT</span>
-          <hr>
-        </div>
-      </div>
-      <!-- fine foto orizz  -->
-      <!-- parte in grigio con icone e descrizione  -->
-      <div class="bg-gray-100">
-        <div class="cont70">
-          <div class="specialist">
-            <span>Our Core Values</span>
+        <!-- fine jumbotron  -->
+      </header>
+      <main>
+        <div class="cont90">
+          <!-- testo e cards  -->
+          <div class="specialist more-padding">
+            <span>Specialist In Modern Construction</span>
             <hr>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
           </div>
-          <div class="boxes">
-            <div class="box">
-              <div class="icon home">
-                <i class="fas fa-home"></i>
+          <!-- cards  -->
+          <div class="flex margin-bott">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icon">
+                    <i class="far fa-building"></i>
+                  </div>
+                  <h1>Buildings</h1>
+                  <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>ARTFULLY CRAFTED</h1>
+                  <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                  <div class="btn light">GET A QUOTE</div>
+                </div>
               </div>
-                <p>Great Service</p>
-                <hr>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
             </div>
-            <div class="box">
-              <div class="icon sun">
-                <i class="far fa-sun"></i>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icon">
+                    <i class="fas fa-sync-alt"></i>
+                  </div>
+                  <h1>Buildings</h1>
+                  <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>ARTFULLY CRAFTED</h1>
+                  <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                  <div class="btn light">GET A QUOTE</div>
+                </div>
               </div>
-              <p>Highest Standards</p>
-              <hr>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
             </div>
-            <div class="box">
-              <div class="icon user">
-                <i class="fas fa-users"></i>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icon">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <h1>Buildings</h1>
+                  <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>ARTFULLY CRAFTED</h1>
+                  <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                  <div class="btn light">GET A QUOTE</div>
+                </div>
               </div>
-              <p>Professional Team</p>
-              <hr>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
             </div>
-            <div class="box">
-              <div class="icon light">
-                <i class="far fa-lightbulb"></i>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icon">
+                    <i class="fas fa-truck"></i>
+                  </div>
+                  <h1>Buildings</h1>
+                  <p>Buildings Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>ARTFULLY CRAFTED</h1>
+                  <p>Quis autem vel eum iure reprederit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum.</p>
+                  <div class="btn light">GET A QUOTE</div>
+                </div>
               </div>
-              <p>Creative Solution</p>
-              <hr>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
             </div>
           </div>
         </div>
-      </div>    
-      <!--  fineparte in grigio con icone e descrizione  -->
-      <!-- foto con taglio  -->
-      <div class="cont-pic">
-        <div class="circle gray"></div>
-      <div class="bnr-pic">
-        <div class="specialist ">
-          <span>Our Home Owners Say</span>
-          <hr>
-          <img src="img/WM_40_Post-500x500.jpg" alt="">
-          <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti."</p>
-          <h3>JHON DOE - NEW HOME OWNER</h3>
-        </div>
-      </div>
-      <div class="circle gray"></div>
-      </div>
-      <!-- articoli -->
-      <div class="container gray">
-      <div class="cont70">
-        <div class="specialist plus-padding">
-          <span>Latest News</span>
-          <hr>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
-        </div>
-        <div class="boxes news">
-          <div class="box"> 
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-134132600.jpg" alt="">
-            <p>Redeveloping Florida’s Remote Southern Coast</p>
-            <span class="date">December 7th, 2015</span>
-            <hr>
-            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+        <!-- fine cards  -->
+        <!-- foto con taglio  -->
+        <div class="circle dwn"></div>
+        <div class="bnr-pic">
+          <div class="icns-cont">
+            <div class="icn">
+              <i class="fas fa-suitcase"></i>
+              <h2>3543</h2>
+              <p>PLANNING APPLICATION</p>
+            </div>
+            <div class="icn">
+              <i class="far fa-building"></i>
+              <h2>875</h2>
+              <p>COMPLETED PROJECT</p>
+            </div>
+            <div class="icn">
+              <i class="fas fa-users"></i>
+              <h2>178</h2>
+              <p>TRAINED PROFESSIONALS</p>
+            </div>
+            <div class="icn">
+              <i class="fas fa-globe"></i>
+              <h2>19</h2>
+              <p>INTERNETIONAL OFFERTS</p>
+            </div>
           </div>
-          <div class="box">
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-92486644.jpg" alt="">
-            <p>How We Manage Large Construction Projects</p>
-            <span class="date">December 7th, 2015</span>
+        </div>
+        <div class="circle dwn"></div>
+        <!-- fine foto con taglio  -->
+        <div class="cont90">
+          <!-- foto orizz -->
+          <div class="specialist plus-padding">
+            <span>Specialist In Modern Construction</span>
             <hr>
-            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
           </div>
-          <div class="box">
-            <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-332773904.jpg" alt="">
-            <p>Future proofing a modern home</p>
-            <span class="date">December 7th, 2015</span>
+          <div class="pics">
+            <div class="pic-box">
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project2-featured-15013609.jpg" alt="">
+              <div class="none">
+                <div class="cont-icons">
+                  <div class="icon">
+                    <i class="fas fa-link"></i>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <p>Exclusive Urban Living</p>
+                  <span>Commercial</span>
+                </div>
+              </div>
+            </div>
+            <div class="pic-box">
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project1-featured-294276386.jpg" alt="">
+              <div class="none">
+                <div class="cont-icons">
+                  <div class="icon">
+                    <i class="fas fa-link"></i>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <p>Exclusive Urban Living</p>
+                  <span>Commercial</span>
+                </div>
+              </div>
+            </div>
+            <div class="pic-box">
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/project3-featured-189023420.jpg" alt="">
+              <div class="none">
+                <div class="cont-icons">
+                  <div class="icon">
+                    <i class="fas fa-link"></i>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <p>Exclusive Urban Living</p>
+                  <span>Commercial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="all-proj">
             <hr>
-            <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
-          </div>          
+            <span>VIEW ALL PROJECT</span>
+            <hr>
+          </div>
         </div>
-        <div class="all-proj new">
-          <hr>
-          <span>VIEW ALL ARTICLES</span>
-          <hr>
-        </div>
-      </div>
-    </div>
-    <!-- fine articoli  -->
-    <!-- loghi allineati -->
-    <div class="container">
-      <div class="cont70">
-        <div class="specialist">
-          <span>Trusted Partners</span>
-          <hr>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
-        </div>
-        <div class="cont-pics">
-          <img src="img/estate.webp" alt="">
-          <img src="img/foodhouse.webp" alt="">
-          <img src="img/foresthouse.webp" alt="">
-          <img src="img/real.webp" alt="">
-          <img src="img/secure.webp" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- fine loghi allineati -->
-    <!-- foto cantiere -->
-    <div class="container">
-      <div class="pic-builders">
-        <div class="cont-flex">
-          <div class="text">
+        <!-- fine foto orizz  -->
+        <!-- parte in grigio con icone e descrizione  -->
+        <div class="bg-gray-100">
+          <div class="cont70">
             <div class="specialist">
-              <span>Trusted Partners</span>
+              <span>Our Core Values</span>
               <hr>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
             </div>
+            <div class="boxes">
+              <div class="box">
+                <div class="icon home">
+                  <i class="fas fa-home"></i>
+                </div>
+                  <p>Great Service</p>
+                  <hr>
+                  <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
+              </div>
+              <div class="box">
+                <div class="icon sun">
+                  <i class="far fa-sun"></i>
+                </div>
+                <p>Highest Standards</p>
+                <hr>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
+              </div>
+              <div class="box">
+                <div class="icon user">
+                  <i class="fas fa-users"></i>
+                </div>
+                <p>Professional Team</p>
+                <hr>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
+              </div>
+              <div class="box">
+                <div class="icon light">
+                  <i class="far fa-lightbulb"></i>
+                </div>
+                <p>Creative Solution</p>
+                <hr>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia</p>
+              </div>
+            </div>
           </div>
-          <div class="button">
-            <div class="btn">GET A FREE QUOTE</div>
-            <span>Only take a few seconds!</span>
+        </div>    
+        <!--  fineparte in grigio con icone e descrizione  -->
+        <!-- foto con taglio  -->
+        <div class="cont-pic">
+          <div class="circle gray"></div>
+        <div class="bnr-pic">
+          <div class="specialist ">
+            <span>Our Home Owners Say</span>
+            <hr>
+            <img src="img/WM_40_Post-500x500.jpg" alt="">
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti."</p>
+            <h3>JHON DOE - NEW HOME OWNER</h3>
+          </div>
+        </div>
+        <div class="circle gray"></div>
+        </div>
+        <!-- articoli -->
+        <div class="container gray">
+        <div class="cont70">
+          <div class="specialist plus-padding">
+            <span>Latest News</span>
+            <hr>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+          </div>
+          <div class="boxes news">
+            <div class="box"> 
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-134132600.jpg" alt="">
+              <p>Redeveloping Florida’s Remote Southern Coast</p>
+              <span class="date">December 7th, 2015</span>
+              <hr>
+              <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+            </div>
+            <div class="box">
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-92486644.jpg" alt="">
+              <p>How We Manage Large Construction Projects</p>
+              <span class="date">December 7th, 2015</span>
+              <hr>
+              <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+            </div>
+            <div class="box">
+              <img src="https://avada.theme-fusion.com/construction/wp-content/uploads/sites/55/2015/12/blog-post-332773904.jpg" alt="">
+              <p>Future proofing a modern home</p>
+              <span class="date">December 7th, 2015</span>
+              <hr>
+              <p>Technology is Here to Stay Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus nisl, elementum vitae consequat at, tristique ut enim. Sed ut dignissim leo. Nullam sed metus id sapien faucibus rhoncus sed</p>
+            </div>          
+          </div>
+          <div class="all-proj new">
+            <hr>
+            <span>VIEW ALL ARTICLES</span>
+            <hr>
           </div>
         </div>
       </div>
+      <!-- fine articoli  -->
+      <!-- loghi allineati -->
+      <div class="container">
+        <div class="cont70">
+          <div class="specialist">
+            <span>Trusted Partners</span>
+            <hr>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+          </div>
+          <div class="cont-pics">
+            <img src="img/estate.webp" alt="">
+            <img src="img/foodhouse.webp" alt="">
+            <img src="img/foresthouse.webp" alt="">
+            <img src="img/real.webp" alt="">
+            <img src="img/secure.webp" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- fine loghi allineati -->
+      <!-- foto cantiere -->
+      <div class="container">
+        <div class="pic-builders">
+          <div class="cont-flex">
+            <div class="text">
+              <div class="specialist">
+                <span>Trusted Partners</span>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Consequatur doloremque nihil vel nam atque beatae at aliquid omnis corrupti.</p>
+              </div>
+            </div>
+            <div class="button">
+              <div class="btn">GET A FREE QUOTE</div>
+              <span>Only take a few seconds!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
+      <footer>
+        <div class="container darkgray">
+          <div class="cont90 flex">
+            <div class="column">
+              <img class="logo" :src="logoFooter" alt="">
+              <p>We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.</p>
+              <div class="btn">LEARN MORE</div>
+            </div>
+            <div class="column">
+              <h3>LATEST TWEETS</h3>
+              <span v-for="tweet in latestTweet">{{tweet}}</span>
+            </div>
+            <div class="column">
+              <h3>CONTACT US TODAY</h3>
+              <ul v-for="contact in contactUs">
+                <li>{{contact}}</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>FIND US</h3>
+              <img class="map" :src="map" alt="">
+            </div>
+          </div>
+          <div class="black">
+            <p>COPYRIGHT 2012 - 2015 AVADA THEME BY THEME FUSION   |   ALL RIGHTS RESERVED   |   POWERED BY WORDPRESS</p>
+            <div class="social-box" >
+              <ul>
+                <li  v-for="social in socialMedia" :class="social"></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
     </div>
-    </main>
-    <footer>
-      <div class="container darkgray">
-        <div class="cont90 flex">
-          <div class="column">
-            <img class="logo" src="img/footer-logo.png" alt="">
-            <p>We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.</p>
-            <div class="btn">LEARN MORE</div>
-          </div>
-          <div class="column">
-            <h3>LATEST TWEETS</h3>
-            <span>Tweets by Theme_Fusion</span>
-          </div>
-          <div class="column">
-            <h3>CONTACT US TODAY</h3>
-            <ul>
-              <li>Corporate Location <br> 1600 Amphitheatre Parkway <br> London WC1 1BA</li>
-              <li>Residential Location <br> 9521 Broadsberry Avenue <br> Paddington RC7 9ZA</li>
-              <li>1.800.458.556 / 1.800.532.2112</li>
-              <li>info@your-domain.com</li>
-              <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
-              <li>Saturday - Sunday: 9:00 AM - 12:00 PM</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h3>FIND US</h3>
-            <img class="map" src="img/construction_map_pin.png-Notti" alt="">
-          </div>
-        </div>
-        <div class="black">
-          <p>COPYRIGHT 2012 - 2015 AVADA THEME BY THEME FUSION   |   ALL RIGHTS RESERVED   |   POWERED BY WORDPRESS</p>
-        </div>
-      </div>
-    </footer>
   </div>
+  
+  <script src="js/script.js"></script>
 </body>
 </html>
